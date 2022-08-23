@@ -1,0 +1,870 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    /* background-color: rgb(255, 255, 255); */
+    background-image: url(../assets/body/fondo7.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* nav con grid */
+
+.nav-menu {
+    display: grid; 
+    grid-template-columns: 200px 1fr 120px; 
+    grid-template-rows: 60px; 
+    gap: 5px 5px; 
+    grid-template-areas: 
+        "d-logo menu nav-botones"; 
+    flex-direction: column;
+    width: 92vw;
+    background-color: white;
+    padding: 7px;
+    position: fixed;
+    left: 50px;
+    z-index: 1;
+}
+
+.d-logo { 
+    grid-area: d-logo;
+    /* background-color: antiquewhite; */
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.d-logo img {
+    width: 180px;
+    height: 22x;
+    padding: 5px;
+}
+
+.menu { 
+    grid-area: menu; 
+    /* background-color: beige; */
+    padding: 7px;
+    margin: 5px;
+}
+
+.menu .listaMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 7px;
+}
+
+.menu .listaMenu .link a {
+    /* background-color: aliceblue; */
+    color: rgb(182, 42, 42);
+    font-weight: 600;
+    font-size: 17px;
+    padding: 4px;
+    margin: 5px;
+}
+
+.menu .listaMenu .link a:hover {
+    border-bottom: 2px solid rgb(33, 13, 148);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.nav-botones { 
+    grid-area: nav-botones; 
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-botones .linkNav img{
+    /* background-color: rgb(231, 197, 151); */
+    width: 30px;
+    height: 48px;
+    padding: 2px;
+    border: 7px;
+    /* border-radius: 70px; */
+}
+
+.nav-botones .menuH {
+    display: none;
+}
+
+main {
+    /* background-color: blue; */
+    width: 87vw;
+    margin: 15px;
+    margin-top: 90px;
+}
+
+.d-titulo {
+    /* background-color: aqua; */
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-titulo .titulo {
+    /* background-color: blanchedalmond; */
+    padding: 3px;
+    margin: 2px;
+}
+
+.input-buscar {
+    position: relative;
+    width: 350px;
+}
+
+.input {
+    box-sizing: border-box;
+    color: #191919;
+    padding: 6px 35px 6px 6px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.input-icon {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* .d-titulo .buscar {
+    padding: 2px;
+    margin: 3px;
+    width: 30px;
+    height: 48px;
+    margin-right: 20px;
+} */
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    overflow-x: scroll;
+
+}
+
+.slider-container img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    /* scroll-snap-align: center; */
+    scroll-snap-type: x mandatory
+}
+
+.d-promociones {
+   /*  background-color: rgb(135, 231, 175); */
+    padding: 5px;
+    margin: 25px 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+}
+
+.d-promociones .imgPromociones {
+    align-content: center;
+}
+
+.d-titulo {
+   /*  background-color: azure; */
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.tiendasTitulo {
+    /* background-color: rgb(120, 78, 160); */
+    padding: 3px;
+    margin: 2px;
+}
+
+.tiendas {
+    /* background-color: orange; */
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.tiendas .divTienda {
+    /* background-color: beige; */
+    margin-bottom: 5px;
+    width: 400px;
+    gap: 10px;
+}
+
+.divTienda .imgTienda {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* .footer {
+    background-color: rgb(97, 146, 189);
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    padding: 15px;
+    margin: 15px;
+}
+
+.footer .descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+} */
+
+.footer {
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: 05fr; 
+    gap: 5px 5px; 
+    width: 90vw;
+    height: 17vh;
+   /*  background-color: aqua; */
+    grid-template-areas: 
+    "descripcion rs"; 
+}
+
+.descripcion {
+    /* background-color: #eb9393; */
+    grid-area: descripcion; 
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-content: center;
+    justify-content: center;
+    width: 60vw; 
+    padding: 15px;
+    margin: 15px;
+}
+.rs {
+    /* background-color: antiquewhite; */
+    grid-area: rs; 
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-content: center;
+    width: 25vw;
+    left: 50%;
+    text-align: center;
+}
+
+.rs .btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 5px 15px -5px #aaa;
+    margin: 10px;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+    color: #42d2ff;
+}
+
+.rs .btn i {
+    position: relative;
+    z-index: 4;
+    line-height: 50px;
+    font-size: 26px;
+    transition: 0.3s ease-in-out;
+    width:2; 
+    height:2;
+}
+
+.rs .btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(#00c6ff, #0072ff);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.rs .btn:hover i {
+    color: #fff;
+    transform: scale(1.3);
+}
+
+.rs .btn:hover::before {
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;
+}
+
+@keyframes onHover {
+
+0% {
+    left: -110%;
+    top: 90%;
+}
+
+50% {
+    left: 10%;
+    top: -30%;
+}
+
+100% {
+    top: -10%;
+    left: -10%;
+    }
+}
+
+/* Pagina ofertas y tiendas*/
+
+#ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1.5fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: 25rem 25rem;
+    gap: 10px;
+}
+
+#ofertas .ofertaImg {
+    background: radial-gradient(green, yellow);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#ofertas .ofertaImg .img-oferta {
+    width: 400px;
+    height: 350px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#ofertas .ofertaImg p {
+    font-size: 18px;
+    width: 400px;
+    height: auto;
+    /* margin-top: 10px; */
+}
+
+
+/* Nosotros */
+
+.sectionNosotros {  
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    /* background-color: #0072ff; */
+    gap: 10px 10px;
+    margin: 15px;
+    grid-template-areas:
+        "descripcion1 descripcion1 descripcion1 img1"
+        "img2 descripcion2 descripcion2 descripcion2"
+        "titGaleria titGaleria titGaleria titGaleria"
+        "gal1 gal1 gal2 gal3";
+
+}
+
+.img1 { 
+    grid-area: img1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.img1 img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.descripcion1 { 
+    grid-area: descripcion1;
+    /* background-color: aquamarine; */
+    padding: 5px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2 { 
+    grid-area: img2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2 img {
+    width: 600px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+.descripcion2 { 
+    grid-area: descripcion2; 
+    padding: 5px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.titGaleria { 
+    /* background-color: #0072ff; */
+    grid-area: titGaleria; 
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gal1 { 
+    grid-area: gal1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gal1 img {
+    width: 80%;
+    height: auto;
+}
+
+.gal2 { 
+    grid-area: gal2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+
+.gal2 .gal2-img1 {
+    width: 20vw;
+    height: auto;
+    padding: 3px;
+    margin: 15px;
+    
+}
+
+.gal3 { 
+    grid-area: gal3;
+    /* background-color: #0072ff; */ 
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3px;
+}
+
+.gal3 .gal3Img1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 5px;
+}
+
+.gal3 .gal3Img1 .gal3-img1 {
+    width: 80%;
+    height: auto;
+}
+
+.gal3 .gal3Img2 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.gal3 .gal3Img2 .gal3-img2 {
+    width: 80%;
+    height: auto;
+}
+
+
+/* Contactanos */
+
+#sectionContactenos {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    /* background-color: #0072ff; */
+    grid-template-areas:
+    "descripcion descripcion"
+    "dTituloFormulario dTituloFormulario"
+    "d-formulario d-formulario";
+}
+
+#sectionContactenos .descripcion { 
+    grid-area: descripcion; 
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: stretch;
+    /* background-color: #aaa; */
+    width: 98%;
+}
+
+#sectionContactenos .descripcion p   {
+    padding: 5px;
+}
+
+#sectionContactenos .descripcion img {
+    width: 450px;
+    height: auto;
+    border-radius: 7px;
+}
+
+.dTituloFormulario { 
+    grid-area: dTituloFormulario; 
+    padding: 15px;
+    margin: 15px;
+    /* background-color: #fff; */
+}
+
+.d-formulario {
+    grid-area: d-formulario;
+    padding: 5px;
+    margin: 20px;
+}
+
+.d-formulario .formulario { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-formulario .formulario label {
+    padding: 5px;
+    margin: 10px;
+}
+
+.d-formulario .formulario label input {
+    width: 350px;
+    padding: 6px 35px 6px 15px;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.d-formulario .formulario select {
+    width: 350px;
+    height: 40px;
+}
+
+.d-formulario .formulario textarea {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+}
+
+
+.d-formulario .formulario button {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.d-formulario .formulario button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* Media Queries Header Nav */
+
+@media (max-width: 1032px) {
+
+    .nav-menu {
+        grid-template-areas: 
+            "d-logo nav-botones nav-botones"; 
+    }
+
+    .nav-menu .menu {
+        display: none;
+    }
+
+    .nav-botones {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 5px;
+        margin-right: 15%;
+    }
+
+    .nav-botones .linkNav {
+        display: none;
+    }
+
+    .nav-botones .menuH {
+        display: contents;
+
+    }
+    .nav-botones .menuH img {
+        width: 30px;
+        height: 48px;
+        padding: 2px;
+        border: 7px;
+    }
+}
+
+
+/* @media (max-width: 1060px) {
+
+    .nav-menu {
+        display: grid; 
+        grid-template-columns: 200px 1fr 120px; 
+        grid-template-rows: 60px; 
+        gap: 5px 5px; 
+        grid-template-areas: 
+            "d-logo menu nav-botones"; 
+        flex-direction: column;
+        width: 92vw;
+        background-color: white;
+        padding: 7px;
+        position: fixed;
+        left: 50px;
+        z-index: 1;
+    }
+
+} */
+
+
+
+
+/* Media Queries Nosotros */
+
+@media (max-width: 1438px) {
+    .sectionNosotros {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "img1 img1 img1 img1"
+            "descripcion1 descripcion1 descripcion1 descripcion1"
+            "img2 img2 img2 img2"
+            "descripcion2 descripcion2 descripcion2 descripcion2"
+            "titGaleria titGaleria titGaleria titGaleria"
+            "gal1 gal1 gal2 gal2"
+            "gal3 gal3 gal3 gal3";
+    }
+
+    .img1 img {
+        width: 400px;
+        height: auto;
+    }
+
+    .img2 img {
+        width: 400px;
+        height: auto;
+    }
+    
+    .gal3 {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
+@media (max-width: 1190px){
+    .sectionNosotros {
+        grid-template-areas:
+            "img1 img1 img1 img1"
+            "descripcion1 descripcion1 descripcion1 descripcion1"
+            "img2 img2 img2 img2"
+            "descripcion2 descripcion2 descripcion2 descripcion2"
+            "titGaleria titGaleria titGaleria titGaleria"
+            "gal1 gal1 gal1 gal1"
+            "gal2 gal2 gal2 gal2"
+            "gal3 gal3 gal3 gal3";
+    }
+
+
+    .img1 img {
+        width: 400px;
+        height: auto;
+
+    }
+
+    .img2 img {
+        width: 400px;
+        height: auto;
+
+    }
+
+    .gal1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gal2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .gal3 {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+}
+@media (max-width: 990px) {
+    .sectionNosotros {
+        grid-template-areas:
+            "img1 img1 img1 img1"
+            "descripcion1 descripcion1 descripcion1 descripcion1"
+            "img2 img2 img2 img2"
+            "descripcion2 descripcion2 descripcion2 descripcion2"
+            "titGaleria titGaleria titGaleria titGaleria"
+            "gal1 gal1 gal1 gal1"
+            "gal2 gal2 gal2 gal2"
+            "gal3 gal3 gal3 gal3";
+    }
+
+    .img1 img {
+        width: 400px;
+        height: auto;
+    }
+
+    .img2 img {
+        width: 400px;
+        height: auto;
+    }
+
+    .gal1 {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gal2 {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gal2 .gal2-img1{
+        width: 400px;
+        height: auto;
+    }
+    
+    .gal3 {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+/* Media Queries Contactanos */
+
+@media (max-width: 768px){
+
+    #sectionContactenos .descripcion { 
+        grid-area: descripcion; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        width: 98%;
+    }
+
+    .d-formulario .formulario textarea {
+        width: 400px;
+        height: 250px;
+    }
+}
+
+
+/* Media Queries footer */
+
+@media (max-width: 1040px) {
+    .footer {
+        grid-template-rows: 30px;
+        grid-template-areas: 
+        "descripcion descripcion"
+        "rs rs"; 
+    }
+
+    .footer .descripcion {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .rs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
